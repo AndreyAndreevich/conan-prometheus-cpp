@@ -13,7 +13,7 @@
 If you handle multiple dependencies in your project is better to add a *conanfile.txt*
     
     [requires]
-      prometheus-cpp/0.9.0@andrbek/stable
+      prometheus-cpp/0.9.0@andrbek/testing
 
     [options]
       prometheus-cpp:mode=pull                         # REQUIRED, you must specify 'pull' xor 'push'
