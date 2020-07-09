@@ -36,12 +36,12 @@ jobs:
         conan export . demo_pull/testing
         conan export . demo_push/testing
         conan install $CONAN_REFERENCE@demo_pull/testing -o prometheus-cpp:mode=pull --build
-        conan install $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push --build missing
+        conan install $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push --build
 
     - name: Test
       run: |
         conan test test_package $CONAN_REFERENCE@demo_pull/testing -o prometheus-cpp:mode=pull
-        conan test test_package $CONAN_REFERENCE@demo_push/testing
+        conan test test_package $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push
 
     - name: Configure remote
       run: |
