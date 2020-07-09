@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Build Status](https://github.com//AndreyAndreevich/conan-prometheus-cpp/workflows/CI/badge.svg)](https://github.com//AndreyAndreevich/conan-prometheus-cpp/actions)
-[![Download](https://api.bintray.com/packages/andrbek/conan/conan-prometheus-cpp%3Aandrbek/images/download.svg)](https://bintray.com/andrbek/conan/conan-prometheus-cpp%3Aandrbek/_latestVersion)
+[![Download](https://api.bintray.com/packages/andrbek/conan/prometheus-cpp%3Aandrbek/images/download.svg)](https://bintray.com/andrbek/conan/prometheus-cpp%3Aandrbek/_latestVersion)
 
 # conan-prometheus-cpp
 
