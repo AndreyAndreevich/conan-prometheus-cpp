@@ -28,7 +28,7 @@ jobs:
         pip install conan_package_tools
 
     - name: Add custom remotes
-      run: conan remote add andrbek https://api.bintray.com/conan/andrbek/conan
+      run: conan remote add $CONAN_REMOTE $CONAN_UPLOAD --insert
 
     - name: Install
       run: |
@@ -44,9 +44,7 @@ jobs:
         conan test test_package $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push
 
     - name: Configure remote
-      run: |
-        conan remote add $CONAN_REMOTE $CONAN_UPLOAD --insert
-        conan user -p $BINTRAY_API_KEY -r $CONAN_REMOTE $CONAN_USERNAME
+      run: conan user -p $BINTRAY_API_KEY -r $CONAN_REMOTE $CONAN_USERNAME
 
     - name: Push
       run: conan upload $CONAN_REFERENCE@$CONAN_BRANCH --all -r=$CONAN_REMOTE
