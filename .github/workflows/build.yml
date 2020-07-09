@@ -35,8 +35,8 @@ jobs:
         conan export . $CONAN_BRANCH
         conan export . demo_pull/testing
         conan export . demo_push/testing
-        conan install $CONAN_REFERENCE@demo_pull/testing -o prometheus-cpp:mode=pull --build
-        conan install $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push --build
+        conan install $CONAN_REFERENCE@demo_pull/testing -o prometheus-cpp:mode=pull --build missing
+        conan install $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push --build missing
 
     - name: Test
       run: |
