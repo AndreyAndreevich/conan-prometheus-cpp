@@ -27,6 +27,9 @@ jobs:
         pip install conan --upgrade
         pip install conan_package_tools
 
+    - name: Add custom remotes
+      run: conan remote add andrbek https://api.bintray.com/conan/andrbek/conan
+
     - name: Install
       run: |
         conan export . $CONAN_BRANCH
