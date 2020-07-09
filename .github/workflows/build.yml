@@ -35,9 +35,9 @@ jobs:
         conan install $CONAN_REFERENCE@demo_push/testing -o prometheus-cpp:mode=push --build missing
 
     - name: Test
-        run: |
-          conan test test_package $CONAN_REFERENCE@dem_pullo/testing
-          conan test test_package $CONAN_REFERENCE@demo_push/testing
+      run: |
+        conan test test_package $CONAN_REFERENCE@dem_pullo/testing
+        conan test test_package $CONAN_REFERENCE@demo_push/testing
 
     - name: Configure remote
       run: |
